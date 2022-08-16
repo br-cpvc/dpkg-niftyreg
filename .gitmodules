@@ -1,0 +1,3 @@
+[submodule "deps/niftyreg"]
+	path = deps/niftyreg
+	url = git@github.com:br-cpvc/niftyreg.git
