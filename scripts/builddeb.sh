@@ -1,6 +1,6 @@
 #!/bin/bash
 # postbuild script for debian package build. Must be called from the
-# git base directory (not the jenkins subfolder).
+# git base directory (not the scripts subfolder).
 
 # terminate script if a command failes with error code other than 0
 set -e
@@ -51,8 +51,8 @@ echo "packagefile=$packagefile"
 
 description="build machine=${hostname}, build time=${buildtimestamp}, git revision=${gitrevfull}"
 if [ ! -z ${BUILD_NUMBER} ]; then
-    echo "jenkins build number=${BUILD_NUMBER}"
-    description="$description, jenkins build number=${BUILD_NUMBER}"
+    echo "build number=${BUILD_NUMBER}"
+    description="$description, build number=${BUILD_NUMBER}"
 fi
 
 installedsize=`du -s ${deb_root}/ | awk '{print $1}'`
